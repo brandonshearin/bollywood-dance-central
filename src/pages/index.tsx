@@ -2,28 +2,64 @@
 import { Link, PageProps, graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import Layout from "../components/layout";
-import {
-  GatsbyImage,
-  GatsbyImageProps,
-  StaticImage,
-  getImage,
-  getImageData,
-} from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
+import Marquee from "../components/marquee";
+import CityText from "../components/cityText";
 
 // Step 2: Define your component
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const images = data.allFile.nodes.map((node) => {
     return {
       imageName: node.name,
-      imageData: getImage(node.childImageSharp),
+      imageData: node.childImageSharp?.gatsbyImageData,
     };
   });
 
   return (
     <main>
       <Layout pageTitle={"Welcome to my Gatsby site!"}>
-        <GatsbyImage image={images[0].imageData!} alt={images[0].imageName} />
+        <Marquee scrollDirection="left">
+          {images.slice(0, 10).map((image) => {
+            return (
+              <GatsbyImage
+                image={image.imageData!}
+                alt={image.imageName}
+                style={{ borderRadius: "10px" }}
+              />
+            );
+          })}
+        </Marquee>
+
+        <Marquee scrollDirection="right">
+          {images.slice(10, 20).map((image) => {
+            return (
+              <GatsbyImage
+                image={image.imageData!}
+                alt={image.imageName}
+                style={{ borderRadius: "10px" }}
+              />
+            );
+          })}
+        </Marquee>
+
+        <Marquee scrollDirection="left">
+          <div style={{ display: "flex", gap: "1rem" }}>
+            <CityText text="SAN FRANCISCO, CA" />
+            <CityText text="LOS ANGELES, CA" />
+            <CityText text="OAKLAND, CA" />
+            <CityText text="HOUSTON, TX" />
+            <CityText text="AUSTIN, TX" />
+            <CityText text="SAN ANTONIO, TX" />
+
+            <CityText text="SAN FRANCISCO, CA" />
+            <CityText text="LOS ANGELES, CA" />
+            <CityText text="OAKLAND, CA" />
+            <CityText text="HOUSTON, TX" />
+            <CityText text="AUSTIN, TX" />
+            <CityText text="SAN ANTONIO, TX" />
+          </div>
+        </Marquee>
       </Layout>
     </main>
   );
@@ -40,7 +76,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(width: 400, height: 300, layout: FIXED)
         }
       }
     }

@@ -1,6 +1,11 @@
+body {
+    margin: 0;
+    background: rgb(255, 255, 153)
+        /* #F4F4F2, SAME BACKGROUND AS NFT */
+}
+
 .container {
     margin: auto;
-    max-width: 500px;
     font-family: sans-serif;
 }
 

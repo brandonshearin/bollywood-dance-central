@@ -1,0 +1,36 @@
+.marquee-container {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+}
+
+.marquee {
+    flex-shrink: 0;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: var(--gap);
+    min-width: 100%;
+
+}
+
+.scroll-left {
+    animation: scroll-left 70s linear infinite;
+}
+
+.scroll-right {
+    animation: scroll-left 70s linear infinite;
+    animation-direction: reverse;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
