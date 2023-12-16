@@ -1,16 +1,41 @@
+@font-face {
+    font-family: 'quicksand';
+    src: url(/fonts/Quicksand-VariableFont_wght.ttf)
+}
+
+@font-face {
+    font-family: 'rubik-shadow';
+    src: url(/fonts/RubikDoodleShadow-Regular.ttf)
+}
+
+:root {
+    /* --yellow: rgb(255, 255, 153); */
+    --green: #1aae7a;
+    --blue: #006dff;
+    --orange: #ED4A29;
+
+    /* sweet ali */
+    --pink: #d5137b;
+    --yellow: #FAE600;
+
+    --background: #F4F4F2;
+}
+
 body {
     margin: 0;
-    background: rgb(255, 255, 153)
-        /* #F4F4F2, SAME BACKGROUND AS NFT */
+    background: var(--yellow);
+    font-family: 'quicksand';
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container {
     margin: auto;
-    font-family: sans-serif;
-}
-
-.heading {
-    color: rebeccapurple;
+    /* font-family: sans-serif; */
 }
 
 .nav-links {
@@ -19,17 +44,76 @@ body {
     padding-left: 0;
 }
 
+/* .nav-links :nth-child(1) .nav-link-text:hover {
+    color: var(--blue)
+}
+
+.nav-links :nth-child(2) .nav-link-text:hover {
+    color: var(--orange)
+}
+
+.nav-links :nth-child(3) .nav-link-text:hover {
+    color: var(--green)
+} */
+
 .nav-link-item {
     padding-right: 2rem;
 }
 
+.nav-link-text:hover {
+    color: var(--pink)
+}
+
 .nav-link-text {
     color: black;
+    text-decoration: none !important;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .site-title {
+    font-family: 'rubik-shadow';
     font-size: 3rem;
-    color: gray;
-    font-weight: 700;
-    margin: 3rem 0;
+    margin: 3rem 1rem;
+    color: var(--pink);
+}
+
+.typeWritten {
+    overflow: hidden;
+    border-right: .15em solid var(--orange);
+    white-space: nowrap;
+    /* font-size: 1.6rem; */
+    width: 0;
+    animation: typing 2s steps(23, end) forwards, blink .8s infinite
+}
+
+.typeContainer {
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent
+    }
+
+    to {
+        border-color: var(--orange)
+    }
+}
+
+.zig-zag:hover {
+    padding-bottom: .5rem;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-image: url('data:image/svg+xml,%3Csvg width=%2757%27 height=%276%27 viewBox=%270 0 57 6%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M0 1.42356C4.11158 1.42356 4.1116 4.69629 7.66617 4.69629C11.2208 4.69629 11.2208 1.42356 14.7753 1.42356C18.3299 1.42356 18.3299 4.69629 21.8845 4.69629C25.439 4.69629 25.4355 1.42356 28.9901 1.42356C32.5447 1.42356 32.5447 4.69629 36.0993 4.69629C39.6538 4.69629 39.6539 1.42356 43.2084 1.42356C46.763 1.42356 46.763 4.69629 50.3176 4.69629C53.8721 4.69629 53.8722 1.42356 57.4267 1.42356C60.9813 1.42356 60.9813 4.69629 64.5324 4.69629C68.0834 4.69629 68.0905 1.42356 71.6451 1.42356C75.1997 1.42356 75.1996 4.69629 78.7542 4.69629C82.3088 4.69629 82.3088 1.42356 85.8634 1.42356C89.4179 1.42356 89.418 4.69629 92.9725 4.69629C96.5271 4.69629 96.5306 1.42356 100.085 1.42356C103.64 1.42356 103.911 4.69629 107.469 4.69629%27 stroke=%27%23D5137B%27 stroke-width=%271.5%27 stroke-miterlimit=%2710%27/%3E%3C/svg%3E');
 }

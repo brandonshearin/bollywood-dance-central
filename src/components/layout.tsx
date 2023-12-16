@@ -5,8 +5,11 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
-  heading,
   siteTitle,
+  typeWritten,
+  typeContainer,
+  head,
+  zigZag,
 } from "./layout.module.css";
 
 const query = graphql`
@@ -24,30 +27,34 @@ const Layout = ({ pageTitle, children }: any) => {
 
   return (
     <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        {/* <h1 className={heading}>{pageTitle}</h1> */}
-        {children}
-      </main>
+      <div className={head}>
+        <header className={typeContainer}>
+          <div className={`${typeWritten} ${siteTitle}`}>
+            {data.site.siteMetadata.title}
+          </div>
+        </header>
+        <nav>
+          <ul className={navLinks}>
+            <li className={navLinkItem}>
+              <Link to="/" className={`${navLinkText} ${zigZag}`}>
+                Enroll
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/announcements" className={`${navLinkText} ${zigZag}`}>
+                Announcements
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/contact" className={`${navLinkText} ${zigZag}`}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main>{children}</main>
     </div>
   );
 };

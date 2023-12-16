@@ -17,11 +17,11 @@
 }
 
 .scroll-left {
-    animation: scroll-left 70s linear infinite;
+    animation: scroll-left 100s linear infinite;
 }
 
 .scroll-right {
-    animation: scroll-left 70s linear infinite;
+    animation: scroll-left 100s linear infinite;
     animation-direction: reverse;
 }
 

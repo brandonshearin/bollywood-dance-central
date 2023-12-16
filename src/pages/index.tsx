@@ -26,6 +26,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
                 image={image.imageData!}
                 alt={image.imageName}
                 style={{ borderRadius: "10px" }}
+                key={image.imageName}
               />
             );
           })}
@@ -38,6 +39,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
                 image={image.imageData!}
                 alt={image.imageName}
                 style={{ borderRadius: "10px" }}
+                key={image.imageName}
               />
             );
           })}
@@ -45,19 +47,19 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
 
         <Marquee scrollDirection="left">
           <div style={{ display: "flex", gap: "1rem" }}>
-            <CityText text="SAN FRANCISCO, CA" />
-            <CityText text="LOS ANGELES, CA" />
-            <CityText text="OAKLAND, CA" />
-            <CityText text="HOUSTON, TX" />
-            <CityText text="AUSTIN, TX" />
-            <CityText text="SAN ANTONIO, TX" />
+            <CityText text="SAN FRANCISCO" />
+            <CityText text="LOS ANGELES" />
+            <CityText text="OAKLAND" />
+            <CityText text="HOUSTON" />
+            <CityText text="AUSTIN" />
+            <CityText text="SAN ANTONIO" />
 
-            <CityText text="SAN FRANCISCO, CA" />
-            <CityText text="LOS ANGELES, CA" />
-            <CityText text="OAKLAND, CA" />
-            <CityText text="HOUSTON, TX" />
-            <CityText text="AUSTIN, TX" />
-            <CityText text="SAN ANTONIO, TX" />
+            <CityText text="SAN FRANCISCO" />
+            <CityText text="LOS ANGELES" />
+            <CityText text="OAKLAND" />
+            <CityText text="HOUSTON" />
+            <CityText text="AUSTIN" />
+            <CityText text="SAN ANTONIO" />
           </div>
         </Marquee>
       </Layout>
@@ -76,7 +78,8 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          gatsbyImageData(width: 400, height: 300, layout: FIXED)
+          gatsbyImageData(width: 288, height: 368, layout: FIXED)
+          # gatsbyImageData(width: 400, height: 300, layout: FIXED)
         }
       }
     }
