@@ -8,6 +8,18 @@
     src: url(/fonts/RubikDoodleShadow-Regular.ttf)
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+    background: var(--dark-yellow);
+    font-family: 'quicksand';
+}
+
 :root {
     /* --yellow: rgb(255, 255, 153); */
     --green: #1aae7a;
@@ -24,12 +36,6 @@
     --gray-100: #f7fafc;
 }
 
-body {
-    margin: 0;
-    background: var(--dark-yellow);
-    font-family: 'quicksand';
-}
-
 .head {
     display: flex;
     align-items: center;
@@ -38,7 +44,6 @@ body {
 
 .container {
     margin: auto;
-    /* font-family: sans-serif; */
 }
 
 .nav-links {
