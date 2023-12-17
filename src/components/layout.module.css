@@ -16,14 +16,17 @@
 
     /* sweet ali */
     --pink: #d5137b;
-    --yellow: #FAE600;
+    --yellow: #ffde17;
+    --highlight-yellow: #FAE600;
+    --dark-yellow: #FFD200;
 
     --background: #F4F4F2;
+    --gray-100: #f7fafc;
 }
 
 body {
     margin: 0;
-    background: var(--yellow);
+    background: var(--dark-yellow);
     font-family: 'quicksand';
 }
 

@@ -29,14 +29,15 @@ const Layout = ({ pageTitle, children }: any) => {
     <div className={container}>
       <div className={head}>
         <header className={typeContainer}>
-          <div className={`${typeWritten} ${siteTitle}`}>
+          <div className={` ${siteTitle}`}>
+            {/* ${typeWritten}  */}
             {data.site.siteMetadata.title}
           </div>
         </header>
         <nav>
           <ul className={navLinks}>
             <li className={navLinkItem}>
-              <Link to="/" className={`${navLinkText} ${zigZag}`}>
+              <Link to="/enroll" className={`${navLinkText} ${zigZag}`}>
                 Enroll
               </Link>
             </li>
