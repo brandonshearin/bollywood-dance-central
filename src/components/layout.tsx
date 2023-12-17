@@ -29,10 +29,12 @@ const Layout = ({ pageTitle, children }: any) => {
     <div className={container}>
       <div className={head}>
         <header className={typeContainer}>
-          <div className={` ${siteTitle}`}>
-            {/* ${typeWritten}  */}
-            {data.site.siteMetadata.title}
-          </div>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className={` ${siteTitle}`}>
+              {/* ${typeWritten}  */}
+              {data.site.siteMetadata.title}
+            </div>
+          </Link>
         </header>
         <nav>
           <ul className={navLinks}>

@@ -19,6 +19,7 @@
     "@mdx-js/react": "^2.3.0",
     "formik": "^2.4.5",
     "gatsby": "^5.12.12",
+    "gatsby-adapter-netlify": "^1.0.4",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-mdx": "^5.12.3",
     "gatsby-plugin-sharp": "^5.12.3",
