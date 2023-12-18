@@ -28,6 +28,15 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["quicksand, rubik-shadow"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
   ],
 };
 

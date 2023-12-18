@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'quicksand';
+    src: url(./Quicksand-VariableFont_wght.ttf)
+}
+
+@font-face {
+    font-family: 'rubik-shadow';
+    src: url(./RubikDoodleShadow-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'crimson';
+    src: url('./CrimsonText-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Crimson-Bold';
+    src: url(./CrimsonText-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Crimson-SemiBold';
+    src: url(./CrimsonText-SemiBold.tff)
+}

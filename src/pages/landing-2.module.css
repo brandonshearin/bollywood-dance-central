@@ -1,0 +1,32 @@
+.container {
+    background-image: url(../assets/images/hero-image-alt.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.page-title {
+    font-size: 5rem;
+    z-index: 10;
+    color: white;
+    font-family: 'Crimson-Bold';
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    text-align: center;
+}
+
+.white-title {
+    color: white;
+    background: var(--pink);
+    border-radius: 10px;
+}
+
+.pink-title {
+    color: var(--pink)
+}
